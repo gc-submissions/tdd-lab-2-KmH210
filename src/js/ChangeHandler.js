@@ -1,13 +1,14 @@
 /**
  * This class handles change for a vending machine.
  * 
- * IMPORTANT: All amounts are in cents. E.g. $1.35 = 135. This will help with rounding errors.
+ * IMPORTANT: All amounts are in cents. E.g. $1.35 = 135. 
+ * This will help with rounding errors.
  */
 class ChangeHandler {
     
     constructor(amountDue) {
         this.amountDue = null;
-        this.cashTendered = null;
+        this.cashTendered = 0;
     }
 
     /**
@@ -16,6 +17,7 @@ class ChangeHandler {
      */
     insertCoin(type) {
       // TODO
+      
     }
 
     /**
