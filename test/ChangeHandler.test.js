@@ -25,9 +25,6 @@ describe("ChangeHandler", function() {
   });
 
   //insertCoin test cases:
-  
-
-  //Calling function multiple times continues to add on to the amount.
   test("insertCoin - Inserting a quarter adds 25" , () => {
     const changeHandler = new ChangeHandler();
     changeHandler.insertCoin("quarter");
@@ -48,5 +45,20 @@ describe("ChangeHandler", function() {
     changeHandler.insertCoin("penny");
     expect(changeHandler.cashTendered).toEqual(1);
   });
+  //isPaymentSufficient test cases:
+  test("isPaymentSufficient - Returns true if cashTendered more than amountDue", () =>{
+    const changeHandler = new ChangeHandler();
+    changeHandler.isPaymentSufficient();
+    expect(10).toBeGreaterThan(2);
+  });
+  //test("isPaymentSufficient - Returns false if cashTendered less than amountDue", () =>{
+    //const changeHandler = new ChangeHandler();
+    //changeHandler.isPaymentSufficient();
+    //expect(10).toBeLessThan(2);
+  //});
+
+  //Returns false if cashTendered less than amountDue.
+  //Returns true if cashTendered equal to amountDue.
+
 
 });
